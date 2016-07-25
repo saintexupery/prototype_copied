@@ -9,4 +9,12 @@
 
 <h6>작성일시 : {{ post.created_at }}, 수정일시 : {{ post.updated_at }}</h6> <hr/>
 
+<form action="" method="post">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" />
+</form>
+
 {% endblock %}
