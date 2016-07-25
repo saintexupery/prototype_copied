@@ -2,11 +2,11 @@
 
 {% block content %}
 
-<img src="{{ post.photo.url }}" width="600px", height="400px" /> <hr/>
+<img src="{{ post.photo.url }}" width="600px", height="400px" /> <br/>
 
 <h1>{{ post.title }}</h1><br/>
-<h3>{{ post.content }}</h3><br/>
+<h5>{{ post.content }}</h5><br/>
 
-<h5>작성일시 : {{ post.created_at }}, 수정일시 : {{ post.updated_at }}</h5>
+<h6>작성일시 : {{ post.created_at }}, 수정일시 : {{ post.updated_at }}</h6> <hr/>
 
 {% endblock %}
