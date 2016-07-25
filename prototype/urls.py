@@ -23,7 +23,7 @@ from django.shortcuts import redirect
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^blog/', include('blog.urls', namespace='blog')),
-    url(r'^$', lambda request: redirect('blog/index.html')),
+    url(r'^$', lambda request: redirect('blog/index/')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
