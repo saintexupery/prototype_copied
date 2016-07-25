@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+<img src="{{ post.photo.url }}" /> <hr/>
+
+<h1>{{ post.title }}</h1><br/>
+<h3>{{ post.content }}</h3><br/>
+
+<h5>작성일시 : {{ post.created_at }}, 수정일시 : {{ post.updated_at }}</h5>
+
+{% endblock %}

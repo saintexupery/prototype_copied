@@ -3,9 +3,11 @@
 {% block content %}
 
 {% for post in post_list %}
+    <a href="{% url 'blog:post_detail' post.pk %}" >
     <ul>
         {{ post.title }}
     </ul>
+    </a>
 {% endfor %}
 
 {% endblock %}
