@@ -2,7 +2,9 @@
 
 {% block content %}
 
+{% if post.photo %}
 <img src="{{ post.photo.url }}" width="600px", height="400px" /> <br/>
+{% endif %}
 
 <h1>{{ post.title }}</h1><br/>
 <h5>{{ post.content }}</h5><br/>
