@@ -14,7 +14,7 @@ def index(request):
 @login_required
 def post_detail(request, pk):
     post = Post.objects.get(pk=pk)
-    comment_list = Comment.objects.all()
+    comment_list = Comment.objects.filter(post_id=pk)
 
     if request.method == 'POST':
         form = CommentForm(request.POST)
