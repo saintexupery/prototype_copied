@@ -14,6 +14,7 @@ def index(request):
 @login_required
 def post_detail(request, pk):
     post = Post.objects.get(pk=pk)
+    comment_list = Comment.objects.all()
 
     if request.method == 'POST':
         form = CommentForm(request.POST)
@@ -28,5 +29,6 @@ def post_detail(request, pk):
 
     return render(request, 'blog/post_detail.html', {
         'post' : post,
+        'comment_list' : comment_list,
         'form' : form,
     })

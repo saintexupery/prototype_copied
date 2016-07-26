@@ -9,6 +9,13 @@
 
 <h6>작성일시 : {{ post.created_at }}, 수정일시 : {{ post.updated_at }}</h6> <hr/>
 
+{% for comment in comment_list %}
+    <li>
+    {{ comment.message }} by {{ comment.user }}<br/>
+    작성일시 : {{ comment.created_at }}
+    </li>
+{% endfor %}
+
 <form action="" method="post">
     {% csrf_token %}
     <table>
