@@ -128,3 +128,5 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'MEDIA')
 
 LOGIN_REDIRECT_URL = '/'
+
+AUTH_PROFILE_MODULE = 'accounts.UserProfile'
